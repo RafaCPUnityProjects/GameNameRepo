@@ -23,7 +23,7 @@ namespace CompleteProject
 		// Use this for initialization
 		void Awake()
 		{
-			anim = GetComponent<Animator>();
+			anim = GetComponentInChildren<Animator>();
 			navMeshAgent = GetComponent<NavMeshAgent>();
 		}
 
