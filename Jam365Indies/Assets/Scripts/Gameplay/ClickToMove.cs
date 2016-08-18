@@ -19,6 +19,7 @@ namespace CompleteProject
 		private bool walking;
 		private bool enemyClicked;
 		private float nextFire;
+		private bool lastWalkingState;
 
 		// Use this for initialization
 		void Awake()
@@ -30,6 +31,7 @@ namespace CompleteProject
 		// Update is called once per frame
 		void Update()
 		{
+			walking = false;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if (Input.GetButtonDown("Fire2"))
