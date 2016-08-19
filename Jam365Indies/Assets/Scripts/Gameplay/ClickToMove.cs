@@ -69,8 +69,12 @@ namespace CompleteProject
 				walking = true;
 			}
 
-			if(anim)
-				anim.SetBool("IsWalking", walking);
+			if (anim)
+			{
+				anim.SetFloat("Horizontal", navMeshAgent.velocity.x);
+				anim.SetFloat("Vertical", navMeshAgent.velocity.z);
+
+			}
 		}
 
 		private void MoveAndShoot()
