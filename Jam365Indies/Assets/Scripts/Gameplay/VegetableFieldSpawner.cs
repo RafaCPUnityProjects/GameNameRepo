@@ -21,13 +21,14 @@ public class VegetableFieldSpawner : MonoBehaviour
 
 	private void PlantVegetables()
 	{
+		GameObject randomVegetable = GetRandomVegetable ();
 		Vector3 pos;
 		for (int y = 0; y < vegetablePerCollum; y++)
 		{
 			for (int x = 0; x < vegetablePerRoll; x++)
 			{
 				pos = new Vector3(fieldStepValues.x * x, 0, fieldStepValues.y * y);
-				plantedVegetables[x, y] = (GameObject)Instantiate(GetRandomVegetable(), startPos + pos, Quaternion.identity);
+				plantedVegetables[x, y] = (GameObject)Instantiate(randomVegetable, startPos + pos, Quaternion.identity);
 			}
 		}
 	}
