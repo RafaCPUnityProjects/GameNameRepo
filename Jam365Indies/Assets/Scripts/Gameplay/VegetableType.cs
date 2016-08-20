@@ -1,7 +1,7 @@
 ﻿public enum VegetableType {
-	Carrot,
-	Lettuce,
-	Pumpkin,
-	Eggplant,
-	Tomato
+	Cenoura,
+	Alface,
+	Abobora,
+	Beterraba,
+	Tomate
 }
