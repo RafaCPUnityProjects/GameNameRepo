@@ -40,7 +40,7 @@ public class EnemySpawner : MonoBehaviour {
 		enemyQuantity = GameObject.FindGameObjectsWithTag ("Enemy").Length;
 
 		// Verify if exists much enemies as the max simultaneous
-		if (enemyQuantity >= maxSimultaneous || enemyQuantity == 0) // This counting can turn a bootleneck 
+		if (enemyQuantity >= maxSimultaneous || lstGardenVegetables.Count == 0) // This counting can turn a bootleneck 
 			return;
 		
 		// Choose a vegetable to replace
