@@ -9,16 +9,12 @@ public class EvilVegetable : MonoBehaviour
 	public float nearDistance = 2.5f;
 	public float timeToTarget = 3f;
 	public float eatingTime = 2f;
-	public Sprite[] sprites;
 
-
-	private Sprite mySprite;
-	private Dictionary<VegetableType, Sprite> mapSprites = new Dictionary<VegetableType, Sprite> ();
+	private Dictionary<VegetableType, float> hideMap = new Dictionary<VegetableType, float>();
 	private List<VegetableType> acceptableVegetableTypes = new List<VegetableType> ();
 	private List<GameObject> nearVegetables = new List<GameObject> ();
 	private GameObject targetVegetable;
 	private float eatTimer = 0;
-	private SpriteRenderer myRenderer;
 	private Animator myAnimator;
 	private Vector3 startAttackPos;
 	public bool isOnLight = false;
@@ -27,10 +23,8 @@ public class EvilVegetable : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		myRenderer = gameObject.GetComponent<SpriteRenderer> ();
 		myAnimator = GetComponent<Animator> ();
-		mySprite = myRenderer.sprite;
-		LoadSpriteMap ();
+		LoadHideMap ();
 	}
 
 	// Update is called once per frame
@@ -83,7 +77,8 @@ public class EvilVegetable : MonoBehaviour
 
 		transform.localPosition = Vector3.MoveTowards (transform.localPosition, targetVegetable.transform.localPosition, timeToTarget * Time.deltaTime);
 		if (Vector3.Distance (transform.localPosition,  targetVegetable.transform.localPosition) <= 0.25) {
-			transform.localPosition = targetVegetable.transform.localPosition;
+			//transform.localPosition = targetVegetable.transform.localPosition;
+			transform.localPosition.Set (targetVegetable.transform.localPosition.x, targetVegetable.transform.localPosition.y, targetVegetable.transform.localPosition.z-0.1f);
 			myState = EnemyStates.Eating;
 			eatTimer = eatingTime;
 			myAnimator.SetBool ("IsWalking", false);
@@ -117,9 +112,6 @@ public class EvilVegetable : MonoBehaviour
 	{
 		myState = EnemyStates.Hidden;
 
-		// Change the animation
-		// myAnimator.SetBool ("IsHiding", true);
-
 		ResetAcceptableVegetableTypes ();
 		CheckNearVegetables ();
 
@@ -130,8 +122,10 @@ public class EvilVegetable : MonoBehaviour
 				acceptableVegetableTypes.Remove(nearVegType);
 		}
 
-		// Change my sprite to hide
-		myRenderer.sprite = mapSprites[acceptableVegetableTypes [Random.Range (0, acceptableVegetableTypes.Count)]];
+		// Change the animation
+		myAnimator.SetBool ("IsHiding", true);
+
+		myAnimator.SetFloat("HideType", hideMap[acceptableVegetableTypes [Random.Range (0, acceptableVegetableTypes.Count)]]);
 
 	}
 
@@ -141,10 +135,7 @@ public class EvilVegetable : MonoBehaviour
 		myState = EnemyStates.Idle;
 
 		// Change the animation
-		//myAnimator.SetBool ("IsHiding", false);
-
-		// Change my sprite back to original
-		myRenderer.sprite = mySprite;
+		myAnimator.SetBool ("IsHiding", false);
 
 	}
 
@@ -159,19 +150,18 @@ public class EvilVegetable : MonoBehaviour
 		acceptableVegetableTypes.Add (VegetableType.Cenoura);
 		acceptableVegetableTypes.Add (VegetableType.Tomate);
 	}
-	
+
 
 	// TODO : Refactor this little monster!!!
-	private void LoadSpriteMap ()
+	private void LoadHideMap ()
 	{
-		mapSprites.Clear ();
-		mapSprites.Add (VegetableType.Abobora, sprites [0]);
-		mapSprites.Add (VegetableType.Alface, sprites [1]);
-		mapSprites.Add (VegetableType.Beterraba, sprites [2]);
-		mapSprites.Add (VegetableType.Cenoura, sprites [3]);
-		mapSprites.Add (VegetableType.Tomate, sprites [4]);
+		hideMap.Clear ();
+		hideMap.Add (VegetableType.Abobora, 0f);
+		hideMap.Add (VegetableType.Alface, 0.25f);
+		hideMap.Add (VegetableType.Beterraba, 0.5f);
+		hideMap.Add (VegetableType.Cenoura, 0.75f);
+		hideMap.Add (VegetableType.Tomate, 1f);
 	}
-
 
 	void OnTriggerEnter (Collider col) {
 		if (col.tag == "Light") {
