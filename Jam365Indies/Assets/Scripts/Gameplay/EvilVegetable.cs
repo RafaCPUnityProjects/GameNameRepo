@@ -19,17 +19,17 @@ public class EvilVegetable : MonoBehaviour
 	private List<GameObject> nearVegetables = new List<GameObject> ();
 	private Vector3 targetPosition;
 	private float timer = 0;
-	private GameObject scarecrow;
 	private SpriteRenderer myRenderer;
 	private Animator myAnimator;
 	private Vector3 startAttackPos;
 	private bool isEating;
 	private bool isHidden = false;
+	private bool isOnLight = false;
+
 
 	// Use this for initialization
 	void Start ()
 	{
-		scarecrow = GameObject.FindGameObjectWithTag ("Player");
 		myRenderer = gameObject.GetComponent<SpriteRenderer> ();
 		myAnimator = GetComponent<Animator> ();
 		mySprite = myRenderer.sprite;
@@ -40,13 +40,13 @@ public class EvilVegetable : MonoBehaviour
 	void Update ()
 	{
 		if (isHidden) {
-			if (Vector3.Distance (transform.position, scarecrow.transform.position) <= distanceToHide) {
+			if (CheckIsInLight()) {
 				return;
 			} else {
 				Show ();
 			}
 		} else {
-			if (Vector3.Distance (transform.position, scarecrow.transform.position) <= distanceToHide) {
+			if (CheckIsInLight()) {
 				Hide ();
 				return;
 			}
@@ -108,6 +108,12 @@ public class EvilVegetable : MonoBehaviour
 		myAnimator.SetBool ("IsEating", false);
 	}
 
+
+	private bool CheckIsInLight () {
+		return isOnLight;
+	}
+
+
 	private void Hide ()
 	{
 		isHidden = true;
@@ -139,6 +145,8 @@ public class EvilVegetable : MonoBehaviour
 		myAnimator.SetBool ("IsHiding", isHidden);
 	}
 
+	
+
 	private void ResetAcceptableVegetableTypes ()
 	{
 		acceptableVegetableTypes.Clear ();
@@ -159,6 +167,19 @@ public class EvilVegetable : MonoBehaviour
 		mapSprites.Add (VegetableType.Beterraba, sprites [2]);
 		mapSprites.Add (VegetableType.Cenoura, sprites [3]);
 		mapSprites.Add (VegetableType.Tomate, sprites [4]);
+	}
+
+
+	void OnTriggerEnter (Collider col) {
+		if (col.tag == "Light") {
+			isOnLight = true;
+		}
+	}
+
+	void OnTriggerExit (Collider col) {
+		if (col.gameObject.tag == "Light") {
+			isOnLight = false;
+		}
 	}
 
 }
