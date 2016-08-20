@@ -4,12 +4,11 @@ using System.Collections.Generic;
 
 public class EvilVegetable : MonoBehaviour
 {
+	public enum EnemyStates { Hidden, Eating, Walking, Idle };
 
-	public float thinkingInterval = 1.0f;
-	public float distanceToHide = 5.0f;
 	public float nearDistance = 2.5f;
-	public float timeToTarget = 5f;
-	public float eatingTime = 5f;
+	public float timeToTarget = 3f;
+	public float eatingTime = 2f;
 	public Sprite[] sprites;
 
 
@@ -17,15 +16,13 @@ public class EvilVegetable : MonoBehaviour
 	private Dictionary<VegetableType, Sprite> mapSprites = new Dictionary<VegetableType, Sprite> ();
 	private List<VegetableType> acceptableVegetableTypes = new List<VegetableType> ();
 	private List<GameObject> nearVegetables = new List<GameObject> ();
-	private Vector3 targetPosition;
-	private float timer = 0;
+	private GameObject targetVegetable;
+	private float eatTimer = 0;
 	private SpriteRenderer myRenderer;
 	private Animator myAnimator;
 	private Vector3 startAttackPos;
-	private bool isEating;
-	private bool isHidden = false;
-	private bool isOnLight = false;
-
+	public bool isOnLight = false;
+	private EnemyStates myState = EnemyStates.Idle;
 
 	// Use this for initialization
 	void Start ()
@@ -39,28 +36,73 @@ public class EvilVegetable : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (isHidden) {
-			if (CheckIsInLight()) {
+		switch (myState) {
+		case EnemyStates.Idle:
+			Attack ();
+			break;
+	
+		case EnemyStates.Hidden:
+			if (isOnLight) {
 				return;
 			} else {
 				Show ();
 			}
-		} else {
-			if (CheckIsInLight()) {
-				Hide ();
-				return;
-			}
+			break;
+
+		case EnemyStates.Walking:
+			Walk ();	
+			break;
+
+		case EnemyStates.Eating:
+			Eat ();
+			break;
 		}
 			
-		if (timer > 0) {
-			timer -= Time.deltaTime;
-			return;
+		if (isOnLight) {
+			Hide ();
 		}
 
-		CheckNearVegetables ();
-		//Attack ();
 	}
 
+	private void Attack ()
+	{
+		CheckNearVegetables ();
+
+		if (nearVegetables.Count == 0)
+			return;
+
+		// Choose a target
+		targetVegetable = nearVegetables [Random.Range (0, nearVegetables.Count)];
+
+		// Start walking to the target
+		myState = EnemyStates.Walking;
+	}
+
+	private void Walk () {
+		myAnimator.SetBool ("IsWalking", true);
+
+		transform.localPosition = Vector3.MoveTowards (transform.localPosition, targetVegetable.transform.localPosition, timeToTarget * Time.deltaTime);
+		if (Vector3.Distance (transform.localPosition,  targetVegetable.transform.localPosition) <= 0.25) {
+			transform.localPosition = targetVegetable.transform.localPosition;
+			myState = EnemyStates.Eating;
+			eatTimer = eatingTime;
+			myAnimator.SetBool ("IsWalking", false);
+			myAnimator.SetBool ("IsEating", true);
+		}
+
+	}
+
+	private void Eat () {
+		if (eatTimer > 0) {
+			eatTimer -= Time.deltaTime;
+			return;
+		} else {
+			Destroy (targetVegetable);
+			myState = EnemyStates.Idle;
+			myAnimator.SetBool ("IsEating", false);
+		}
+	}
+		
 	private void CheckNearVegetables ()
 	{
 		nearVegetables.Clear ();
@@ -71,78 +113,39 @@ public class EvilVegetable : MonoBehaviour
 		}
 	}
 
-	private void Attack ()
-	{
-		if (nearVegetables.Count == 0)
-			return;
-
-		// Choose a target
-		GameObject targetVegetable = nearVegetables [Random.Range (0, nearVegetables.Count)];
-		targetPosition = targetVegetable.transform.position;
-
-		if (!myAnimator.GetBool ("IsWalking") && !myAnimator.GetBool ("IsEating")) {
-			StartCoroutine (GoToTarget ());
-			Destroy (targetVegetable);
-		}
-		timer = thinkingInterval;
-	}
-
-	IEnumerator GoToTarget ()
-	{
-		float elapsedTime = 0;
-		startAttackPos = transform.position;
-		myAnimator.SetBool ("IsWalking", true);
-		while (elapsedTime < timeToTarget) {
-			elapsedTime += Time.deltaTime;
-			transform.position = Vector3.Lerp (startAttackPos, targetPosition, elapsedTime / timeToTarget);
-			yield return null;
-		}
-		myAnimator.SetBool ("IsWalking", false);
-		StartCoroutine (StartEating ());
-	}
-
-	IEnumerator StartEating ()
-	{
-		myAnimator.SetBool ("IsEating", true);
-		yield return new WaitForSeconds (eatingTime);
-		myAnimator.SetBool ("IsEating", false);
-	}
-
-
-	private bool CheckIsInLight () {
-		return isOnLight;
-	}
-
-
 	private void Hide ()
 	{
-		isHidden = true;
+		myState = EnemyStates.Hidden;
+
+		// Change the animation
+		// myAnimator.SetBool ("IsHiding", true);
+
 		ResetAcceptableVegetableTypes ();
+		CheckNearVegetables ();
 
 		// Ignore the vegetable types around
 		foreach (GameObject veg in nearVegetables) {
 			VegetableType nearVegType = veg.GetComponent<Vegetable> ().vegetableType;
 			if (acceptableVegetableTypes.Contains(nearVegType))
-				acceptableVegetableTypes.Remove (nearVegType);
+				acceptableVegetableTypes.Remove(nearVegType);
 		}
 
 		// Change my sprite to hide
 		myRenderer.sprite = mapSprites[acceptableVegetableTypes [Random.Range (0, acceptableVegetableTypes.Count)]];
 
-		// Change the animation
-		myAnimator.SetBool ("IsHiding", isHidden);
 	}
 
 
 	private void Show ()
 	{
-		isHidden = false;
+		myState = EnemyStates.Idle;
+
+		// Change the animation
+		//myAnimator.SetBool ("IsHiding", false);
 
 		// Change my sprite back to original
 		myRenderer.sprite = mySprite;
 
-		// Change the animation
-		myAnimator.SetBool ("IsHiding", isHidden);
 	}
 
 	
@@ -177,7 +180,7 @@ public class EvilVegetable : MonoBehaviour
 	}
 
 	void OnTriggerExit (Collider col) {
-		if (col.gameObject.tag == "Light") {
+		if (col.tag == "Light") {
 			isOnLight = false;
 		}
 	}
