@@ -13,10 +13,7 @@ public class EnemySpawner : MonoBehaviour {
 	private int enemyQuantity = 0;
 
 	void Start () {
-		lstGardenVegetables = new List<GameObject> ();
-		foreach (GameObject go in GameObject.FindGameObjectsWithTag ("Vegetable")) {
-			lstGardenVegetables.Add (go);
-		}
+		ListPlantedVegetables ();
 	}
 
 	// Update is called once per frame
@@ -30,7 +27,12 @@ public class EnemySpawner : MonoBehaviour {
 		Spawn ();
 	}
 
-
+	void ListPlantedVegetables () {
+		lstGardenVegetables = new List<GameObject> ();
+		foreach (GameObject go in GameObject.FindGameObjectsWithTag ("Vegetable")) {
+			lstGardenVegetables.Add (go);
+		}
+	}
 
 	void Spawn () {
 		// Start timer
@@ -39,6 +41,9 @@ public class EnemySpawner : MonoBehaviour {
 		// Get the current quantity of enemies
 		enemyQuantity = GameObject.FindGameObjectsWithTag ("Enemy").Length;
 
+		// Refresh the list of planted vegetables
+		ListPlantedVegetables ();
+
 		// Verify if exists much enemies as the max simultaneous
 		if (enemyQuantity >= maxSimultaneous || lstGardenVegetables.Count == 0) // This counting can turn a bootleneck 
 			return;
@@ -46,14 +51,16 @@ public class EnemySpawner : MonoBehaviour {
 		// Choose a vegetable to replace
 		GameObject poorVegetableMarkedToSpawnOver = lstGardenVegetables[Random.Range(0, lstGardenVegetables.Count)];
 
+		// TODO : Implementar para não espawnear na luz!
+
 		// Remove vegetable from list
-		lstGardenVegetables.Remove(poorVegetableMarkedToSpawnOver);
+		//lstGardenVegetables.Remove(poorVegetableMarkedToSpawnOver);
 
 		// Spawn the evil vegetable in place of the ordinary vegetable
 		Instantiate (evilVegetable, poorVegetableMarkedToSpawnOver.transform.position, Quaternion.identity);
 
 		// Kill the poor vegetable
-		Destroy (poorVegetableMarkedToSpawnOver);
+		//Destroy (poorVegetableMarkedToSpawnOver);
 	}
 
 }

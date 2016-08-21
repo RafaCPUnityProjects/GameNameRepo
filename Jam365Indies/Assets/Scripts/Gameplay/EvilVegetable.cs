@@ -129,7 +129,6 @@ public class EvilVegetable : MonoBehaviour
 
 	}
 
-
 	private void Show ()
 	{
 		myState = EnemyStates.Idle;
@@ -139,7 +138,10 @@ public class EvilVegetable : MonoBehaviour
 
 	}
 
-	
+	private void Die () 
+	{
+		Destroy (gameObject);
+	}
 
 	private void ResetAcceptableVegetableTypes ()
 	{
@@ -166,6 +168,9 @@ public class EvilVegetable : MonoBehaviour
 	void OnTriggerEnter (Collider col) {
 		if (col.tag == "Light") {
 			isOnLight = true;
+		}
+		if (col.tag == "Slash") {
+			Die ();
 		}
 	}
 
