@@ -70,11 +70,15 @@ public class EvilVegetable : MonoBehaviour
 
 		// Start walking to the target
 		myState = EnemyStates.Walking;
+		myAnimator.SetBool ("IsWalking", true);
 	}
 
 	private void Walk () {
-		myAnimator.SetBool ("IsWalking", true);
-
+		if (!targetVegetable) {
+			myState = EnemyStates.Idle;
+			myAnimator.SetBool ("IsWalking", false);
+		}
+			
 		transform.localPosition = Vector3.MoveTowards (transform.localPosition, targetVegetable.transform.localPosition, timeToTarget * Time.deltaTime);
 		if (Vector3.Distance (transform.localPosition,  targetVegetable.transform.localPosition) <= 0.25) {
 			//transform.localPosition = targetVegetable.transform.localPosition;
@@ -92,7 +96,7 @@ public class EvilVegetable : MonoBehaviour
 			eatTimer -= Time.deltaTime;
 			return;
 		} else {
-			Destroy (targetVegetable);
+			if (targetVegetable) Destroy (targetVegetable);
 			myState = EnemyStates.Idle;
 			myAnimator.SetBool ("IsEating", false);
 		}
