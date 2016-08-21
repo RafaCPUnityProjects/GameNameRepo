@@ -1,0 +1,486 @@
+fileFormatVersion: 2
+guid: 8626853555a74b940b681cafda6d88e3
+timeCreated: 1471779502
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerAttackLeft_0
+    21300002: PlayerAttackLeft_1
+    21300004: PlayerAttackLeft_2
+    21300006: PlayerAttackLeft_3
+    21300008: PlayerAttackLeft_4
+    21300010: PlayerAttackLeft_5
+    21300012: PlayerAttackLeft_6
+    21300014: PlayerAttackLeft_7
+    21300016: PlayerAttackLeft_8
+    21300018: PlayerAttackLeft_9
+    21300020: PlayerAttackLeft_10
+    21300022: PlayerAttackLeft_11
+    21300024: PlayerAttackLeft_12
+    21300026: PlayerAttackLeft_13
+    21300028: PlayerAttackLeft_14
+    21300030: PlayerAttackLeft_15
+    21300032: PlayerAttackLeft_16
+    21300034: PlayerAttackLeft_17
+    21300036: PlayerAttackLeft_18
+    21300038: PlayerAttackLeft_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayerAttackLeft_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: -14}
+        - {x: 18, y: -36}
+        - {x: 46, y: -36}
+        - {x: 46, y: 32}
+        - {x: 37, y: 56}
+        - {x: -37, y: 56}
+        - {x: -37, y: 26}
+    - name: PlayerAttackLeft_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 592
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 65}
+        - {x: -27, y: 53}
+        - {x: -27, y: 47}
+        - {x: -26, y: 46}
+        - {x: 1, y: -10}
+        - {x: 21, y: -36}
+        - {x: 42, y: -36}
+        - {x: 54, y: -12}
+        - {x: 54, y: 56}
+        - {x: 37, y: 65}
+    - name: PlayerAttackLeft_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 592
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 71}
+        - {x: -10, y: 71}
+        - {x: -14, y: 65}
+        - {x: -14, y: 56}
+        - {x: -12, y: 55}
+        - {x: 3, y: -36}
+        - {x: 61, y: -36}
+        - {x: 61, y: 32}
+        - {x: 46, y: 64}
+    - name: PlayerAttackLeft_3
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 592
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 64}
+        - {x: -30, y: 16}
+        - {x: -6, y: -36}
+        - {x: 43, y: -36}
+        - {x: 50, y: -24}
+        - {x: 59, y: 6}
+        - {x: 59, y: 30}
+        - {x: 30, y: 64}
+    - name: PlayerAttackLeft_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 61}
+        - {x: -33, y: 54}
+        - {x: -43, y: 38}
+        - {x: -43, y: 24}
+        - {x: -17, y: -33}
+        - {x: -7, y: -36}
+        - {x: 57, y: -36}
+        - {x: 57, y: 46}
+        - {x: 33, y: 61}
+    - name: PlayerAttackLeft_5
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 444
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 52}
+        - {x: -32, y: 47}
+        - {x: -51, y: 24}
+        - {x: -51, y: 8}
+        - {x: -25, y: -36}
+        - {x: 54, y: -36}
+        - {x: 54, y: 30}
+        - {x: 42, y: 52}
+    - name: PlayerAttackLeft_6
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 444
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 41}
+        - {x: 5, y: 20}
+        - {x: 12, y: 17}
+        - {x: 6, y: 20}
+        - {x: -31, y: 41}
+        - {x: -35, y: 41}
+        - {x: -55, y: 25}
+        - {x: -55, y: -36}
+        - {x: 52, y: -36}
+        - {x: 52, y: 25}
+        - {x: 42, y: 41}
+    - name: PlayerAttackLeft_7
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 444
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53, y: -36}
+        - {x: 40, y: -36}
+        - {x: 48, y: -10}
+        - {x: 48, y: 41}
+        - {x: 45, y: 42}
+        - {x: -20, y: 42}
+        - {x: -50, y: 28}
+        - {x: -53, y: 22}
+    - name: PlayerAttackLeft_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 296
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 30}
+        - {x: 34, y: 42}
+        - {x: -7, y: 42}
+        - {x: -49, y: 5}
+        - {x: -49, y: -33}
+        - {x: -40, y: -46}
+        - {x: -32, y: -49}
+        - {x: -29, y: -48}
+        - {x: -29, y: -45}
+        - {x: 24, y: -42}
+        - {x: 45, y: -25}
+    - name: PlayerAttackLeft_9
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 296
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 29}
+        - {x: 34, y: 43}
+        - {x: 8, y: 43}
+        - {x: 0, y: 34}
+        - {x: 1, y: 22}
+        - {x: -46, y: -12}
+        - {x: -48, y: -13}
+        - {x: -48, y: -40}
+        - {x: -32, y: -61}
+        - {x: -15, y: -61}
+        - {x: -14, y: -59}
+        - {x: -15, y: -57}
+        - {x: 23, y: -43}
+        - {x: 43, y: -23}
+    - name: PlayerAttackLeft_10
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 296
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 43}
+        - {x: -42, y: 26}
+        - {x: -42, y: -70}
+        - {x: -1, y: -70}
+        - {x: 14, y: -62}
+        - {x: 43, y: -41}
+        - {x: 43, y: 35}
+        - {x: 40, y: 43}
+    - name: PlayerAttackLeft_11
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 296
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 43}
+        - {x: -8, y: 34}
+        - {x: -48, y: -6}
+        - {x: -48, y: -64}
+        - {x: 43, y: -64}
+        - {x: 43, y: 39}
+        - {x: 29, y: 43}
+    - name: PlayerAttackLeft_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49, y: -57}
+        - {x: -10, y: -57}
+        - {x: 44, y: -35}
+        - {x: 44, y: 42}
+        - {x: -30, y: 42}
+        - {x: -49, y: -1}
+    - name: PlayerAttackLeft_13
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 148
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 42}
+        - {x: -2, y: 39}
+        - {x: 0, y: 24}
+        - {x: -49, y: 12}
+        - {x: -51, y: 3}
+        - {x: -51, y: -45}
+        - {x: -50, y: -47}
+        - {x: 25, y: -47}
+        - {x: 45, y: -38}
+        - {x: 45, y: 36}
+        - {x: 39, y: 42}
+    - name: PlayerAttackLeft_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 148
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 42}
+        - {x: -53, y: 40}
+        - {x: -53, y: -30}
+        - {x: -42, y: -34}
+        - {x: -39, y: -32}
+        - {x: 1, y: -36}
+        - {x: 29, y: -36}
+        - {x: 46, y: -26}
+        - {x: 47, y: -23}
+        - {x: 47, y: 36}
+        - {x: 37, y: 42}
+    - name: PlayerAttackLeft_15
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 148
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 42}
+        - {x: -55, y: 17}
+        - {x: -55, y: -25}
+        - {x: -53, y: -36}
+        - {x: 48, y: -36}
+        - {x: 48, y: 42}
+    - name: PlayerAttackLeft_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 44}
+        - {x: 3, y: 21}
+        - {x: 10, y: 19}
+        - {x: 17, y: 12}
+        - {x: 10, y: 19}
+        - {x: 3, y: 20}
+        - {x: -20, y: 44}
+        - {x: -33, y: 44}
+        - {x: -54, y: 37}
+        - {x: -54, y: -24}
+        - {x: -42, y: -36}
+        - {x: 48, y: -36}
+        - {x: 50, y: -32}
+        - {x: 50, y: 26}
+        - {x: 39, y: 44}
+    - name: PlayerAttackLeft_17
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 0
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 52}
+        - {x: -48, y: 52}
+        - {x: -49, y: 51}
+        - {x: -49, y: -20}
+        - {x: -33, y: -36}
+        - {x: 49, y: -36}
+        - {x: 51, y: -32}
+        - {x: 51, y: 33}
+        - {x: 35, y: 50}
+    - name: PlayerAttackLeft_18
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 36}
+        - {x: -42, y: 26}
+        - {x: -34, y: -36}
+        - {x: 53, y: -36}
+        - {x: 53, y: 37}
+        - {x: 44, y: 54}
+        - {x: 20, y: 57}
+        - {x: -22, y: 57}
+        - {x: -37, y: 46}
+    - name: PlayerAttackLeft_19
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 122
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: 56}
+        - {x: -24, y: 56}
+        - {x: -34, y: 52}
+        - {x: -40, y: 40}
+        - {x: -40, y: 30}
+        - {x: -6, y: 35}
+        - {x: 1, y: -11}
+        - {x: 27, y: -36}
+        - {x: 30, y: -35}
+        - {x: 49, y: -22}
+        - {x: 50, y: -17}
+        - {x: 50, y: 41}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

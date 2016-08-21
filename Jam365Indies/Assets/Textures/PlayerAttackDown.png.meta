@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: ef4796690ad92d6429cca78013c674b7
+timeCreated: 1471779493
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerAttackDown_0
+    21300002: PlayerAttackDown_1
+    21300004: PlayerAttackDown_2
+    21300006: PlayerAttackDown_3
+    21300008: PlayerAttackDown_4
+    21300010: PlayerAttackDown_5
+    21300012: PlayerAttackDown_6
+    21300014: PlayerAttackDown_7
+    21300016: PlayerAttackDown_8
+    21300018: PlayerAttackDown_9
+    21300020: PlayerAttackDown_10
+    21300022: PlayerAttackDown_11
+    21300024: PlayerAttackDown_12
+    21300026: PlayerAttackDown_13
+    21300028: PlayerAttackDown_14
+    21300030: PlayerAttackDown_15
+    21300032: PlayerAttackDown_16
+    21300034: PlayerAttackDown_17
+    21300036: PlayerAttackDown_18
+    21300038: PlayerAttackDown_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayerAttackDown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 564
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 70.5}
+        - {x: -48, y: 51.5}
+        - {x: -40, y: 49.5}
+        - {x: -29, y: 52.5}
+        - {x: 5, y: 47.5}
+        - {x: 2, y: 20.5}
+        - {x: 4, y: 33.5}
+        - {x: -2, y: 40.5}
+        - {x: -23, y: 45.5}
+        - {x: -34, y: 43.5}
+        - {x: -51, y: 29.5}
+        - {x: -51, y: -25.5}
+        - {x: -35, y: -30.5}
+        - {x: -12, y: -30.5}
+        - {x: 18, y: -4.5}
+        - {x: 19, y: 12.5}
+        - {x: 19, y: 70.5}
+    - name: PlayerAttackDown_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 564
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 66.5}
+        - {x: -60, y: 47.5}
+        - {x: -61, y: 38.5}
+        - {x: -61, y: 27.5}
+        - {x: -57, y: 22.5}
+        - {x: -54, y: 23.5}
+        - {x: -32, y: 19.5}
+        - {x: -13, y: 19.5}
+        - {x: -23, y: 19.5}
+        - {x: -44, y: 15.5}
+        - {x: -51, y: 13.5}
+        - {x: -56, y: 4.5}
+        - {x: -39, y: -21.5}
+        - {x: -30, y: -30.5}
+        - {x: -13, y: -30.5}
+        - {x: 16, y: -24.5}
+        - {x: 16, y: 54.5}
+        - {x: -13, y: 66.5}
+    - name: PlayerAttackDown_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 564
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 54.5}
+        - {x: -48, y: 54.5}
+        - {x: -56, y: 51.5}
+        - {x: -66, y: 22.5}
+        - {x: -66, y: -5.5}
+        - {x: -58, y: -10.5}
+        - {x: -51, y: -7.5}
+        - {x: -53, y: 4.5}
+        - {x: -53, y: 8.5}
+        - {x: -51, y: 11.5}
+        - {x: -53, y: 5.5}
+        - {x: -53, y: 4.5}
+        - {x: -32, y: -30.5}
+        - {x: -13, y: -30.5}
+        - {x: 2, y: -15.5}
+        - {x: 14, y: 12.5}
+        - {x: 14, y: 32.5}
+        - {x: 8, y: 50.5}
+    - name: PlayerAttackDown_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 564
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 25.5}
+        - {x: -61, y: 21.5}
+        - {x: -61, y: -32.5}
+        - {x: -60, y: -33.5}
+        - {x: -4, y: -33.5}
+        - {x: 12, y: 3.5}
+        - {x: 12, y: 25.5}
+      - - {x: -49, y: 60.5}
+        - {x: -49, y: 37.5}
+        - {x: -38, y: 30.5}
+        - {x: -8, y: 30.5}
+        - {x: -4, y: 38.5}
+        - {x: -4, y: 60.5}
+    - name: PlayerAttackDown_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 423
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 22.5}
+        - {x: -57, y: 13.5}
+        - {x: -57, y: -31.5}
+        - {x: -41, y: -49.5}
+        - {x: -15, y: -49.5}
+        - {x: 12, y: 10.5}
+        - {x: 12, y: 22.5}
+      - - {x: -36, y: 65.5}
+        - {x: -44, y: 64.5}
+        - {x: -51, y: 55.5}
+        - {x: -51, y: 40.5}
+        - {x: -49, y: 35.5}
+        - {x: -12, y: 35.5}
+        - {x: -7, y: 41.5}
+        - {x: -7, y: 61.5}
+        - {x: -8, y: 65.5}
+    - name: PlayerAttackDown_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 423
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: -31.5}
+        - {x: -17, y: -29.5}
+        - {x: 2, y: -5.5}
+        - {x: 13, y: 11.5}
+        - {x: 13, y: 17.5}
+        - {x: 9, y: 21.5}
+        - {x: -9, y: 21.5}
+        - {x: -34, y: 16.5}
+        - {x: -43, y: 10.5}
+        - {x: -52, y: 1.5}
+        - {x: -52, y: -4.5}
+        - {x: -51, y: -6.5}
+        - {x: -50, y: -26.5}
+        - {x: -25, y: -58.5}
+        - {x: -1, y: -58.5}
+        - {x: 7, y: -54.5}
+        - {x: 3, y: -50.5}
+        - {x: -20, y: -36.5}
+        - {x: -27, y: -27.5}
+      - - {x: -8, y: 55.5}
+        - {x: -13, y: 57.5}
+        - {x: -38, y: 57.5}
+        - {x: -49, y: 46.5}
+        - {x: -49, y: 32.5}
+        - {x: -42, y: 27.5}
+        - {x: -12, y: 27.5}
+        - {x: -6, y: 35.5}
+        - {x: -4, y: 44.5}
+        - {x: -4, y: 49.5}
+    - name: PlayerAttackDown_6
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 423
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 4.5}
+        - {x: -52, y: -5.5}
+        - {x: -32, y: -52.5}
+        - {x: -20, y: -60.5}
+        - {x: 28, y: -60.5}
+        - {x: 28, y: 19.5}
+        - {x: -33, y: 19.5}
+        - {x: -34, y: 18.5}
+      - - {x: -41, y: 50.5}
+        - {x: -46, y: 39.5}
+        - {x: -46, y: 27.5}
+        - {x: -35, y: 19.5}
+        - {x: -9, y: 19.5}
+        - {x: -1, y: 28.5}
+        - {x: -1, y: 50.5}
+    - name: PlayerAttackDown_7
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 423
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 44.5}
+        - {x: -46, y: 41.5}
+        - {x: -52, y: 11.5}
+        - {x: -52, y: -11.5}
+        - {x: -38, y: -22.5}
+        - {x: -25, y: -29.5}
+        - {x: -17, y: -33.5}
+        - {x: -7, y: -14.5}
+        - {x: -9, y: -1.5}
+        - {x: -2, y: -2.5}
+        - {x: -5, y: -11.5}
+        - {x: -7, y: -57.5}
+        - {x: 52, y: -57.5}
+        - {x: 52, y: -36.5}
+        - {x: 23, y: 44.5}
+    - name: PlayerAttackDown_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 282
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 27.5}
+        - {x: 6, y: 44.5}
+        - {x: -51, y: 44.5}
+        - {x: -51, y: -33.5}
+        - {x: -34, y: -54.5}
+        - {x: 66, y: -54.5}
+        - {x: 69, y: -41.5}
+        - {x: 69, y: -19.5}
+    - name: PlayerAttackDown_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 282
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 45.5}
+        - {x: -51, y: 18.5}
+        - {x: -51, y: -13.5}
+        - {x: 1, y: -57.5}
+        - {x: 43, y: -57.5}
+        - {x: 56, y: -48.5}
+        - {x: 56, y: -3.5}
+        - {x: 9, y: 45.5}
+    - name: PlayerAttackDown_10
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 282
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 44.5}
+        - {x: -51, y: 18.5}
+        - {x: -51, y: -6.5}
+        - {x: -18, y: -35.5}
+        - {x: -9, y: -13.5}
+        - {x: -9, y: -2.5}
+        - {x: -5, y: -2.5}
+        - {x: 2, y: -0.5}
+        - {x: -9, y: -11.5}
+        - {x: -9, y: -28.5}
+        - {x: -18, y: -45.5}
+        - {x: -20, y: -57.5}
+        - {x: 4, y: -63.5}
+        - {x: 39, y: -63.5}
+        - {x: 39, y: -24.5}
+        - {x: 15, y: 44.5}
+    - name: PlayerAttackDown_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 282
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 44.5}
+        - {x: -50, y: 37.5}
+        - {x: -50, y: -11.5}
+        - {x: -34, y: -42.5}
+        - {x: -14, y: -65.5}
+        - {x: 21, y: -65.5}
+        - {x: 21, y: 44.5}
+    - name: PlayerAttackDown_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 141
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 42.5}
+        - {x: -1, y: 44.5}
+        - {x: -30, y: 44.5}
+        - {x: -47, y: 30.5}
+        - {x: -50, y: 13.5}
+        - {x: -50, y: -36.5}
+        - {x: -22, y: -63.5}
+        - {x: 0, y: -63.5}
+        - {x: 3, y: -60.5}
+        - {x: 3, y: -57.5}
+        - {x: 18, y: -8.5}
+        - {x: 18, y: 18.5}
+    - name: PlayerAttackDown_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 141
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 35.5}
+        - {x: -5, y: 44.5}
+        - {x: -23, y: 44.5}
+        - {x: -33, y: 40.5}
+        - {x: -41, y: 30.5}
+        - {x: -48, y: 18.5}
+        - {x: -52, y: 11.5}
+        - {x: -52, y: -37.5}
+        - {x: -37, y: -56.5}
+        - {x: -18, y: -56.5}
+        - {x: -16, y: -52.5}
+        - {x: 18, y: 1.5}
+        - {x: 18, y: 10.5}
+    - name: PlayerAttackDown_14
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 141
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 44.5}
+        - {x: -27, y: 44.5}
+        - {x: -46, y: 30.5}
+        - {x: -54, y: 18.5}
+        - {x: -54, y: -26.5}
+        - {x: -50, y: -45.5}
+        - {x: -29, y: -45.5}
+        - {x: 18, y: -4.5}
+        - {x: 18, y: 21.5}
+        - {x: 10, y: 38.5}
+    - name: PlayerAttackDown_15
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 141
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 10.5}
+        - {x: 13, y: 9.5}
+        - {x: 10, y: 26.5}
+        - {x: 7, y: 42.5}
+        - {x: 4, y: 43.5}
+        - {x: -41, y: 43.5}
+        - {x: -59, y: 15.5}
+        - {x: -59, y: -30.5}
+        - {x: -57, y: -31.5}
+        - {x: -18, y: -31.5}
+        - {x: 17, y: -2.5}
+        - {x: 18, y: -0.5}
+        - {x: 18, y: 9.5}
+    - name: PlayerAttackDown_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 44.5}
+        - {x: -53, y: 44.5}
+        - {x: -61, y: 18.5}
+        - {x: -61, y: -16.5}
+        - {x: -55, y: -19.5}
+        - {x: -24, y: -30.5}
+        - {x: -16, y: -30.5}
+        - {x: 19, y: -2.5}
+        - {x: 19, y: 22.5}
+    - name: PlayerAttackDown_17
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 11.5}
+        - {x: -54, y: 4.5}
+        - {x: -51, y: 6.5}
+        - {x: -47, y: 14.5}
+        - {x: -39, y: 23.5}
+        - {x: -47, y: 13.5}
+        - {x: -48, y: 10.5}
+        - {x: -47, y: -2.5}
+        - {x: -30, y: -30.5}
+        - {x: -14, y: -30.5}
+        - {x: 20, y: -9.5}
+        - {x: 20, y: 7.5}
+        - {x: 12, y: 35.5}
+        - {x: -12, y: 53.5}
+        - {x: -38, y: 53.5}
+        - {x: -59, y: 32.5}
+    - name: PlayerAttackDown_18
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 35.5}
+        - {x: -3, y: 62.5}
+        - {x: -22, y: 62.5}
+        - {x: -52, y: 44.5}
+        - {x: -52, y: 23.5}
+        - {x: -49, y: 22.5}
+        - {x: -30, y: 38.5}
+        - {x: -29, y: 40.5}
+        - {x: -17, y: 44.5}
+        - {x: -24, y: 42.5}
+        - {x: -32, y: 36.5}
+        - {x: -51, y: 10.5}
+        - {x: -38, y: -14.5}
+        - {x: -25, y: -29.5}
+        - {x: -24, y: -30.5}
+        - {x: -12, y: -30.5}
+        - {x: 16, y: -5.5}
+        - {x: 21, y: 0.5}
+        - {x: 20, y: 3.5}
+    - name: PlayerAttackDown_19
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 68.5}
+        - {x: -14, y: 68.5}
+        - {x: -41, y: 58.5}
+        - {x: -48, y: 47.5}
+        - {x: -48, y: 40.5}
+        - {x: -46, y: 36.5}
+        - {x: -19, y: 49.5}
+        - {x: -37, y: 36.5}
+        - {x: -39, y: 26.5}
+        - {x: -48, y: 19.5}
+        - {x: -48, y: 6.5}
+        - {x: -40, y: -20.5}
+        - {x: -23, y: -30.5}
+        - {x: -15, y: -30.5}
+        - {x: 19, y: -6.5}
+        - {x: 19, y: 36.5}
+        - {x: 5, y: 65.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -27,7 +27,7 @@ public class VegetableFieldSpawner : MonoBehaviour
 		{
 			for (int x = 0; x < vegetablePerRoll; x++)
 			{
-				pos = new Vector3(fieldStepValues.x * x, 0, fieldStepValues.y * y);
+				pos = new Vector3(fieldStepValues.x * x, fieldStepValues.y * y);
 				plantedVegetables[x, y] = (GameObject)Instantiate(randomVegetable, startPos + pos, Quaternion.identity);
 			}
 		}
@@ -40,7 +40,7 @@ public class VegetableFieldSpawner : MonoBehaviour
 		fieldDimensions = sizeMarker.position - startPos;
 
 		float xStep = fieldDimensions.x / vegetablePerRoll;
-		float yStep = fieldDimensions.z / vegetablePerCollum;
+		float yStep = fieldDimensions.y / vegetablePerCollum;
 		fieldStepValues = new Vector2(xStep, yStep);
 
 		plantedVegetables = new GameObject[vegetablePerRoll, vegetablePerCollum];
@@ -49,5 +49,14 @@ public class VegetableFieldSpawner : MonoBehaviour
 	GameObject GetRandomVegetable()
 	{
 		return vegetablesPrefabs[Random.Range(0, vegetablesPrefabs.Length)];
+	}
+
+	void OnDrawGizmos()
+	{
+		startPos = transform.position;
+
+		fieldDimensions = sizeMarker.position - startPos;
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireCube(startPos + (fieldDimensions * 0.5f), fieldDimensions);
 	}
 }
