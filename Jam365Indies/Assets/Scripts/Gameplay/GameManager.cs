@@ -1,21 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
 	public float gameTime;
 	public float remainingTime;
 	public float remainingVegetablesPercent;
-	public int minPercentToWin;
+	public float minPercentToWin;
 
 	private float totalVegetables;
 	private float remainingVegetables;
 	private bool gameEnded = false;
 
+	public Text txtTime;
+	public Text txtMinPercent;
+	public Text txtPercent;
+
 	// Use this for initialization
 	void Start () {
-		Invoke ("CountTotalVegetables", 1);
-		InvokeRepeating("CountRemainingVegetables", 2, 2);
+		Invoke ("CountTotalVegetables", 0.4f);
+		InvokeRepeating("CountRemainingVegetables", 0.5f, 2);
 	}
 	
 	// Update is called once per frame
@@ -24,14 +29,17 @@ public class GameManager : MonoBehaviour {
 			return;
 
 		remainingTime = gameTime - Time.time;
-					
-		if (remainingVegetablesPercent < minPercentToWin) {
+
+		UpdateUI ();
+
+		if (remainingVegetablesPercent > 0 && remainingVegetablesPercent < minPercentToWin) {
 			GameOver ();
 		}
 
 		if (remainingTime <= 0 && remainingVegetablesPercent >= minPercentToWin) {
 			WinLevel ();
 		}
+
 	}
 
 	private void CountRemainingVegetables () {
@@ -57,5 +65,11 @@ public class GameManager : MonoBehaviour {
 	void GameOver () {
 		gameEnded = true;
 		Debug.Log ("You Lose!");
+	}
+
+	void UpdateUI () {
+		txtTime.text = "Remaining Time: " + FormatTime ();
+		txtMinPercent.text = "Min: " + Mathf.Floor (minPercentToWin * 100) + " %";
+		txtPercent.text = "Vegetables: " + Mathf.Floor (remainingVegetablesPercent * 100) + " %";
 	}
 }
