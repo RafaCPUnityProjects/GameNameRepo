@@ -1,0 +1,10 @@
+{495a73c6-3fa0-4f74-84be-099e1cad0f7f} event:/PlayerWalk
+{533d7420-ead0-4e75-b641-9e3eb36013f7} event:/PlayerAttack
+{dde2c2c5-a119-4297-b6bc-2bbb5aa2f111} event:/EnemyEat
+{3102ce6b-88d9-474f-ac6f-13fdfef32922} event:/EnemyHit
+{bc01744d-82a3-4181-beae-2541b95bb20f} event:/Win
+{af4092fa-a9b1-41f6-8aef-bdc35047577e} event:/Lose
+{20024a9f-594c-4b75-90b0-6aa65edaadd0} event:/Music
+{895c4d82-9c8e-495f-bb20-5198d38b8fbb} bus:/
+{757cbbdb-1209-4874-87dd-295999633405} bus:/Reverb
+{511cdb62-08ee-4df9-b9d4-4b0805d4cbed} bank:/Master Bank

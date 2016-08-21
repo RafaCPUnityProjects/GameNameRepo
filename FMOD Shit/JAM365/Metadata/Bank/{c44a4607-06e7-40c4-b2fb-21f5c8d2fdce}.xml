@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="Bank" id="{c44a4607-06e7-40c4-b2fb-21f5c8d2fdce}">
+        <property name="name">
+            <value>FUCKYOU</value>
+        </property>
+        <relationship name="audioTable">
+            <destination>{bdf09372-331a-48b4-815b-7f340007e0b7}</destination>
+        </relationship>
+        <relationship name="folder">
+            <destination>{66b50624-d729-4e50-bf96-ad56d4ad0ac4}</destination>
+        </relationship>
+    </object>
+    <object class="AudioTable" id="{bdf09372-331a-48b4-815b-7f340007e0b7}">
+        <property name="name">
+            <value>Audio Table</value>
+        </property>
+        <property name="sourceDirectory">
+            <value>Assets</value>
+        </property>
+    </object>
+</objects>
