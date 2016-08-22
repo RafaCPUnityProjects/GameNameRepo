@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
 	public float gameTime;
-	public float remainingTime;
-	public float remainingVegetablesPercent;
 	public float minPercentToWin;
+	public string nextLevel;
 
+	private float remainingTime;
+	private float remainingVegetablesPercent;
 	private float totalVegetables;
 	private float remainingVegetables;
 	private bool gameEnded = false;
@@ -16,6 +18,11 @@ public class GameManager : MonoBehaviour {
 	public Text txtTime;
 	public Text txtMinPercent;
 	public Text txtPercent;
+	public Image menu;
+	public Text txtVictory;
+	public Text txtLose;
+	public Button btnNext;
+	public Button btnRestart;
 
 	[FMODUnity.EventRef]
 	public string MusicEvent;
@@ -40,8 +47,6 @@ public class GameManager : MonoBehaviour {
 
 		remainingTime = gameTime - Time.time;
 
-		UpdateUI ();
-
 		if (remainingVegetablesPercent > 0 && remainingVegetablesPercent < minPercentToWin) {
 			GameOver ();
 		}
@@ -50,6 +55,7 @@ public class GameManager : MonoBehaviour {
 			WinLevel ();
 		}
 
+		UpdateUI ();
 	}
 
 	void OnDestroy()
@@ -74,21 +80,37 @@ public class GameManager : MonoBehaviour {
 
 	void WinLevel(){
 		gameEnded = true;
+		menu.gameObject.SetActive (true);
+		txtVictory.gameObject.SetActive (true);
+		btnNext.gameObject.SetActive (true);
 		musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		FMODUnity.RuntimeManager.PlayOneShot(WinEvent, transform.position);
-		Debug.Log ("You Win!");
 	}
 
 	void GameOver () {
 		gameEnded = true;
+		menu.gameObject.SetActive (true);
+		txtLose.gameObject.SetActive (true);
+		btnRestart.gameObject.SetActive (true);
 		musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		FMODUnity.RuntimeManager.PlayOneShot(LoseEvent, transform.position);
-		Debug.Log ("You Lose!");
 	}
 
 	void UpdateUI () {
 		txtTime.text = "Remaining Time: " + FormatTime ();
 		txtMinPercent.text = "Min: " + Mathf.Floor (minPercentToWin * 100) + " %";
 		txtPercent.text = "Vegetables: " + Mathf.Floor (remainingVegetablesPercent * 100) + " %";
+	}
+
+	public void NextLevel () {
+		SceneManager.LoadScene(nextLevel);
+	}
+
+	public void RestartLevel () {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+
+	public void Quit () {
+		SceneManager.LoadScene("mainMenu");
 	}
 }
