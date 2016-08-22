@@ -17,10 +17,20 @@ public class GameManager : MonoBehaviour {
 	public Text txtMinPercent;
 	public Text txtPercent;
 
+	[FMODUnity.EventRef]
+	public string MusicEvent;
+	FMOD.Studio.EventInstance musicInstance;
+
+	[FMODUnity.EventRef]
+	public string WinEvent;
+	[FMODUnity.EventRef]
+	public string LoseEvent;
 	// Use this for initialization
 	void Start () {
 		Invoke ("CountTotalVegetables", 0.4f);
 		InvokeRepeating("CountRemainingVegetables", 0.5f, 2);
+		musicInstance = FMODUnity.RuntimeManager.CreateInstance(MusicEvent);
+		musicInstance.start();
 	}
 	
 	// Update is called once per frame
@@ -42,6 +52,11 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+	void OnDestroy()
+	{
+		musicInstance.release();
+	}
+
 	private void CountRemainingVegetables () {
 		remainingVegetables = GameObject.FindGameObjectsWithTag ("Vegetable").Length;
 		remainingVegetablesPercent = remainingVegetables / totalVegetables;
@@ -59,11 +74,15 @@ public class GameManager : MonoBehaviour {
 
 	void WinLevel(){
 		gameEnded = true;
+		musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		FMODUnity.RuntimeManager.PlayOneShot(WinEvent, transform.position);
 		Debug.Log ("You Win!");
 	}
 
 	void GameOver () {
 		gameEnded = true;
+		musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		FMODUnity.RuntimeManager.PlayOneShot(LoseEvent, transform.position);
 		Debug.Log ("You Lose!");
 	}
 
