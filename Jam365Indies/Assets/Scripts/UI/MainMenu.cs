@@ -11,4 +11,17 @@ public class MainMenu : MonoBehaviour
 	{
 		SceneManager.LoadScene(sceneToLoadID);
 	}
+
+	public void Quit () {
+		Application.Quit ();
+	}
+
+	public GameObject credits;
+	public void ShowCredits () {
+		credits.SetActive (true);
+	}
+
+	public void HideCredits () {
+		credits.SetActive (false);
+	}
 }
